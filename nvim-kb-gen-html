@@ -1,0 +1,6 @@
+#!/usr/local/bin/fish
+# Generate nvim keybindings HTML document from markdown and stylesheet
+# Author: Sam Kagan
+# Last Modified: 9/22/2021
+cd ~/.important/nvim-keybindings
+pandoc --variable pagetitle="Neovim Keybindings" --standalone -f markdown nvim-keybindings.md -o nvim-keybindings.html
