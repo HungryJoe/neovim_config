@@ -53,5 +53,5 @@ return require('packer').startup(function()
     "SmiteshP/nvim-gps",
     requires = "nvim-treesitter/nvim-treesitter"
   }
-  use "~/Code/Third_Party_Software/nvim-treesitter-textobjects"
+  use "HungryJoe/nvim-treesitter-textobjects"
 end)
