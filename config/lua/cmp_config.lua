@@ -37,9 +37,9 @@ return function()
       end,
     },
     snippet = {
-      expand = function()
-        error('snippet engine is not configured.')
-      end,
+      expand = function(args)
+        require'luasnip'.lsp_expand(args.body)
+      end
     },
     preselect = types.cmp.PreselectMode.Item,
     window = {

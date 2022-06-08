@@ -5,6 +5,7 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
   use 'neovim/nvim-lspconfig'
+  use { 'L3MON4D3/LuaSnip' }
   use {
     'hrsh7th/nvim-cmp',
     requires = {
