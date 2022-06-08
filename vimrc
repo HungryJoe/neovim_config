@@ -90,9 +90,7 @@ set backspace=eol,start,indent
 
 " Ignore case when searching
 set ignorecase
-
-" When searching try to be smart about cases 
-set smartcase
+nnoremap <leader>ii <CMD>set invignorecase<CR>/
 
 " Highlight search results
 set hlsearch
@@ -105,6 +103,9 @@ set lazyredraw
 
 " For regular expressions turn magic on
 set magic
+
+" Easily find and replace inside a visual selection
+vnoremap <leader>s :<BS><BS><BS><BS><BS>%s/\%V
 
 " Show matching brackets when text indicator is over them
 set showmatch 
@@ -356,7 +357,7 @@ if &compatible
 endif
 
 " Set two-space tab for some filetypes
-au FileType yaml,plantuml,typescript,lua set tabstop=2 shiftwidth=2
+au FileType yaml,plantuml,typescript,lua,html set tabstop=2 shiftwidth=2
 
 " Disable ' bracketing in plantuml files in commments
 au FileType plantuml Brackets! ' ' -visual=1 -context=comment
