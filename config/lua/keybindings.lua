@@ -64,5 +64,10 @@ return function()
   vim.api.nvim_set_keymap("n", t"<leader>jl", "<CMD>Gitsigns toggle_current_line_blame<CR>", opts)
 
   -- Treesitter Playground
-  vim.api.nvim_set_keymap("n", t"<leader>tp", "<CMD>TSPlaygroundToggle<CR>", opts)
+  vim.api.nvim_set_keymap("n", t"<leader>pp", "<CMD>TSPlaygroundToggle<CR>", opts)
+
+  -- Telescope
+  vim.api.nvim_set_keymap("n", t"<leader>tf", "<CMD>Telescope find_files<CR>", opts)
+  vim.api.nvim_set_keymap("n", t"<leader>td", "<CMD>Telescope current_buffer_fuzzy_find<CR>", opts)
+  vim.api.nvim_set_keymap("n", t"<leader>tw", "<CMD>Telescope live_grep<CR>", opts)
 end

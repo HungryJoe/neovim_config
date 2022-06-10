@@ -55,4 +55,15 @@ return require('packer').startup(function()
     requires = "nvim-treesitter/nvim-treesitter"
   }
   use "HungryJoe/nvim-treesitter-textobjects"
+  use {
+    "nvim-telescope/telescope.nvim",
+    requires = {
+      'nvim-lua/plenary.nvim'
+    }
+  }
+  use {
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'make',
+    requires = {"nvim-telescope/telescope.nvim"}
+  }
 end)

@@ -65,7 +65,7 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `<leader>jp` | preview current Git hunk | gitsigns
 `<leader>jl` | toggle Git current-line blame | gitsigns
 `<Tab><S-Tab>` | scroll completion options | cmp | Insert
-`<leader>tp` | toggle treesitter playground | treesitter playground
+`<leader>pp` | toggle treesitter playground | treesitter playground
 `s` | sneak-search below cursor | lightspeed
 `S` | sneak-search above cursor | lightspeed
 `z` | sneak-search below cursor | lightspeed | Operator-Pending
@@ -78,6 +78,9 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `K` | goto previous major section of code (Python & TS only) | text-objects
 `L` | swap argument/list-/dict-element under cursor with next one (Python only) | text-objects
 `H` | swap argument/list-/dict-element under cursor with previous one (Python only) | text-objects
+`<leader>tf` | find files | telescope
+`<leader>td` | search in current buffer (Document) | telescope
+`<leader>tw` | search in current directory (Workspace) | telescope
 
 ## Custom Bindings
 
