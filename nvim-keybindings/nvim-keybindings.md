@@ -70,10 +70,6 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `S` | sneak-search above cursor | lightspeed
 `z` | sneak-search below cursor | lightspeed | Operator-Pending
 `Z` | sneak-search above cursor | lightspeed | Operator-Pending
-`f` | goto next instance of a character | lightspeed
-`F` | goto previous instance of a character | lightspeed
-`t` | goto *just before* the next instance of a character | lightspeed
-`T` | goto *just before* the previous instance of a character | lightspeed
 `J` | goto next major section of code (Python & TS only) | text-objects
 `K` | goto previous major section of code (Python & TS only) | text-objects
 `L` | swap argument/list-/dict-element under cursor with next one (Python only) | text-objects
@@ -84,8 +80,8 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 
 ## Custom Bindings
 
-Key sequence | Action
-:-----------:|:-------:
+Key sequence | Action | Mode (if not `Normal`)
+:-----------:|:-------:|:---------------------:
 `Space` | leader
 `;` | enter command mode (i.e. equivalent to `:`)
 `<leader>dj` | goto next LSP diagnostic
@@ -93,7 +89,7 @@ Key sequence | Action
 `<leader>dd` | goto definition of current word (LSP)
 `<leader>ds` | show LSP signature help for current word
 `<leader>dh` | show type of current word if it's an LSP variable or function/method
-`<leader>dc` | show LSP code actions (usually auto-import) for current word
+`<leader>di` | show LSP code actions for current word
 `<leader>dr` | rename current word in entire LSP workspace
 `<leader>q` | quit
 `<leader>fw` | write current buffer/file
@@ -103,3 +99,4 @@ Key sequence | Action
 `<leader>wk` | move cursor to window above
 `<leader>wh` | move cursor to window to left
 `<leader>wl` | move cursor to window to right
+`<leader>s` | search inside selection | Visual
