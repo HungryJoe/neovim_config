@@ -320,7 +320,7 @@ if empty(glob(plug_file))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin($HOME . '/.important/vim/plugins')
+call plug#begin($HOME . '/.local/share/vim/plugins')
 
 " Auto-pair brackets
 Plug 'LucHermitte/lh-brackets'
@@ -332,7 +332,7 @@ Plug 'andymass/vim-matchup'
 
 " Syntax plugins
 Plug 'aklt/plantuml-syntax'
-Plug $HOME . '/.important/vim/nginx_conf'
+Plug $HOME . '/.local/share/vim/nginx_conf'
 
 " Misc. plugins
 if has('nvim')
