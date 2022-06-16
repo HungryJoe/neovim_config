@@ -88,6 +88,10 @@ return function()
           ["<leader>HH"] = "@class.outer",
         },
       },
+    },
+    matchup = {
+      enable = true,
+      disable = {},  -- optional, list of language that will be disabled
     }
   }
 

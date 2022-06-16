@@ -328,6 +328,7 @@ Plug 'LucHermitte/lh-vim-lib'
 
 " Cosmetic plugins
 Plug 'sainnhe/sonokai'
+Plug 'andymass/vim-matchup'
 
 " Syntax plugins
 Plug 'aklt/plantuml-syntax'
@@ -412,6 +413,9 @@ else
           \ 'highlighter': wilder#basic_highlighter(),
           \ }))
 endif
+
+" Matchup config
+let g:matchup_matchparen_offscreen = {'method': 'popup'}
 
 " Colorscheme config
 if has('termguicolors')
