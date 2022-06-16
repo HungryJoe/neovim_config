@@ -22,12 +22,12 @@ return function()
       disabled_filetypes = {},
     },
     sections = {
-      lualine_a = {{'filename', path = 2, shorting_target = 40}},
-      -- lualine_b = {{gps.get_location, cond = gps.is_available}},
-      lualine_b = {},
+      lualine_a = {{'filename', path = 3, shorting_target = 100}},
+      lualine_b = {{gps.get_location, cond = gps.is_available}},
       lualine_c = {},
       lualine_x = {{'diagnostics', sources = {'nvim_diagnostic'}}},
-      lualine_y = {'branch'},
+      -- lualine_y = {'branch'},
+      lualine_y = {},
       lualine_z = {progress, 'location'},
     },
     inactive_sections = {

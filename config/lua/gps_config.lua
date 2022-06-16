@@ -85,7 +85,7 @@ return function()
     -- 0 means no limit
     -- Note: to make use of depth feature properly, make sure your separator isn't something that can appear
     -- in context names (eg: function names, class names, etc)
-    depth = 2,
+    depth = 1,
 
     -- indicator used when context is hits depth limit
     depth_limit_indicator = ".."
