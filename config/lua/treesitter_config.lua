@@ -54,10 +54,10 @@ return function()
         enable = true,
         set_jumps = true,
         goto_next_start = {
-          ["J"] = {"@class.outer", "@function.outer"},
+          ["J"] = {"@class.inner", "@function.inner"},
         },
         goto_previous_start = {
-          ["K"] = {"@class.outer", "@function.outer"},
+          ["K"] = {"@class.inner", "@function.inner"},
         },
       },
       swap = {
