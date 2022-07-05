@@ -1,7 +1,6 @@
 -- Configure Packer plugin
 -- Link: https://github.com/wbthomason/packer.nvim
 
-return function()
   -- Bootstrap Packer on new systems
   -- Source: https://github.com/wbthomason/packer.nvim#bootstrapping
   local fn = vim.fn
@@ -11,6 +10,7 @@ return function()
     vim.cmd 'packadd packer.nvim'
   end
 
+return function()
   util = require'packer.util'
   require'packer'.setup{
     ensure_dependencies   = true, -- Should packer install plugin dependencies?
