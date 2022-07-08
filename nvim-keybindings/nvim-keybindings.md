@@ -87,6 +87,7 @@ Key sequence | Action | Mode (if not `Normal`)
 `<leader>dj` | goto next LSP diagnostic
 `<leader>dk` | goto previous LSP diagnostic
 `<leader>dd` | goto definition of current word (LSP)
+`<leader>dt` | goto type definition of current word (LSP)
 `<leader>ds` | show LSP signature help for current word
 `<leader>dh` | show type of current word if it's an LSP variable or function/method
 `<leader>di` | show LSP code actions for current word

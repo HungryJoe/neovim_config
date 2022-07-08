@@ -17,22 +17,20 @@ return function()
   -- Pick which buffer to go to next
   vim.api.nvim_set_keymap("n", "gp", "<CMD>BufferLinePick<CR>", opts)
 
-  -- LSP
+  -- Diagnostic
   vim.api.nvim_set_keymap("n", t"<leader>dj", "<CMD>lua vim.diagnostic.goto_next()<CR>",
     opts
   )
   vim.api.nvim_set_keymap("n", t"<leader>dk", "<CMD>lua vim.diagnostic.goto_prev()<CR>",
     opts
   )
+
+  -- LSP
   vim.api.nvim_set_keymap("n", t"<leader>dd", "<CMD>lua vim.lsp.buf.definition()<CR>",
     opts
   )
   vim.api.nvim_set_keymap("n", t"<leader>di",
     "<CMD>lua vim.lsp.buf.code_action()<CR>",
-    opts
-  )
-  vim.api.nvim_set_keymap("n", t"<leader>ds",
-    "<CMD>lua vim.lsp.buf.signature_help()<CR>",
     opts
   )
   vim.api.nvim_set_keymap("n", t"<leader>dr", "<CMD>lua vim.lsp.buf.rename()<CR>",
@@ -56,6 +54,7 @@ return function()
     "<CMD>Trouble lsp_references<CR>",
     opts
   )
+  vim.api.nvim_set_keymap("n", t"<leader>dt", "<CMD>Trouble lsp_type_definitions<CR>", opts)
 
   -- Gitsigns
   vim.api.nvim_set_keymap("n", t"<leader>jj", "<CMD>Gitsigns next_hunk<CR>", opts)

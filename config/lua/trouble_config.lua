@@ -38,6 +38,7 @@ return function()
     auto_close = false, -- automatically close the list when you have no diagnostics
     auto_preview = true, -- automatically preview the location of the diagnostic.
     auto_fold = false, -- automatically fold a file trouble list at creation
+    auto_jump = {"lsp_type_definitions"}, -- for the given modes, automatically jump if there is only a single result
     signs = {}, -- icons / text used for a diagnostic
     use_diagnostic_signs = true, -- enabling this will use the signs defined in your lsp client
   }
