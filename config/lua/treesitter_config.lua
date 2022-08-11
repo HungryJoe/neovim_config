@@ -99,7 +99,4 @@ return function()
   vim.api.nvim_win_set_option(0, 'foldmethod', 'expr')
   vim.api.nvim_win_set_option(0, 'foldexpr', 'nvim_treesitter#foldexpr()')
   vim.api.nvim_set_option('foldlevelstart', 99)
-
-  -- Required to compile Haskell parser on OS X
-  require'nvim-treesitter.install'.compilers = { "/usr/local/bin/gcc-11" }
 end
