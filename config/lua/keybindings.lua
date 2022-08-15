@@ -61,6 +61,7 @@ return function()
   vim.api.nvim_set_keymap("n", t"<leader>jk", "<CMD>Gitsigns prev_hunk<CR>", opts)
   vim.api.nvim_set_keymap("n", t"<leader>jp", "<CMD>Gitsigns preview_hunk<CR>", opts)
   vim.api.nvim_set_keymap("n", t"<leader>jl", "<CMD>Gitsigns toggle_current_line_blame<CR>", opts)
+  vim.api.nvim_set_keymap("n", t"<leader>jr", "<CMD>Gitsigns reset_hunk<CR>", opts)
 
   -- Treesitter Playground
   vim.api.nvim_set_keymap("n", t"<leader>pp", "<CMD>TSPlaygroundToggle<CR>", opts)
@@ -69,4 +70,5 @@ return function()
   vim.api.nvim_set_keymap("n", t"<leader>tf", "<CMD>Telescope find_files<CR>", opts)
   vim.api.nvim_set_keymap("n", t"<leader>td", "<CMD>Telescope current_buffer_fuzzy_find<CR>", opts)
   vim.api.nvim_set_keymap("n", t"<leader>tw", "<CMD>Telescope live_grep<CR>", opts)
+  vim.api.nvim_set_keymap("v", t"<leader>tw", "<CMD>Telescope grep_string<CR>", opts)
 end

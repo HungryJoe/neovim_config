@@ -64,6 +64,7 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `<leader>jk` | goto previous Git hunk | gitsigns
 `<leader>jp` | preview current Git hunk | gitsigns
 `<leader>jl` | toggle Git current-line blame | gitsigns
+`<leader>jr` | reset current Git hunk | gitsigns
 `<Tab><S-Tab>` | scroll completion options | cmp | Insert
 `<leader>pp` | toggle treesitter playground | treesitter playground
 `s` | sneak-search below cursor | lightspeed
@@ -77,6 +78,7 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `<leader>tf` | find files | telescope
 `<leader>td` | search in current buffer (Document) | telescope
 `<leader>tw` | search in current directory (Workspace) | telescope
+`<leader>tw` | search current directory for selection (Workspace) | telescope | Visual
 
 ## Custom Bindings
 
@@ -101,3 +103,4 @@ Key sequence | Action | Mode (if not `Normal`)
 `<leader>wh` | move cursor to window to left
 `<leader>wl` | move cursor to window to right
 `<leader>s` | search inside selection | Visual
+`<leader>n` | repeat last search with `invcaseignore`

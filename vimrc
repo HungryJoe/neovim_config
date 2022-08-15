@@ -90,7 +90,7 @@ set backspace=eol,start,indent
 
 " Ignore case when searching
 set ignorecase
-nnoremap <leader>ii <CMD>set invignorecase<CR>/
+nnoremap <leader>n <CMD>set invignorecase<CR>n
 
 " Highlight search results
 set hlsearch

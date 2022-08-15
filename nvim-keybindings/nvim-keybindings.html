@@ -148,10 +148,15 @@
     }
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    span.underline{text-decoration: underline;}
-    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: 1;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
     .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <!--[if lt IE 9]>
@@ -497,88 +502,101 @@ references</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
+<td style="text-align: center;"><code>&lt;leader&gt;jr</code></td>
+<td style="text-align: center;">reset current Git hunk</td>
+<td style="text-align: center;">gitsigns</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
 <td
 style="text-align: center;"><code>&lt;Tab&gt;&lt;S-Tab&gt;</code></td>
 <td style="text-align: center;">scroll completion options</td>
 <td style="text-align: center;">cmp</td>
 <td style="text-align: center;">Insert</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;pp</code></td>
 <td style="text-align: center;">toggle treesitter playground</td>
 <td style="text-align: center;">treesitter playground</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>s</code></td>
 <td style="text-align: center;">sneak-search below cursor</td>
 <td style="text-align: center;">lightspeed</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>S</code></td>
 <td style="text-align: center;">sneak-search above cursor</td>
 <td style="text-align: center;">lightspeed</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>z</code></td>
 <td style="text-align: center;">sneak-search below cursor</td>
 <td style="text-align: center;">lightspeed</td>
 <td style="text-align: center;">Operator-Pending</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>Z</code></td>
 <td style="text-align: center;">sneak-search above cursor</td>
 <td style="text-align: center;">lightspeed</td>
 <td style="text-align: center;">Operator-Pending</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>J</code></td>
 <td style="text-align: center;">goto next major section of code (Python
 &amp; TS only)</td>
 <td style="text-align: center;">text-objects</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>K</code></td>
 <td style="text-align: center;">goto previous major section of code
 (Python &amp; TS only)</td>
 <td style="text-align: center;">text-objects</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>L</code></td>
 <td style="text-align: center;">swap argument/list-/dict-element under
 cursor with next one (Python only)</td>
 <td style="text-align: center;">text-objects</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>H</code></td>
 <td style="text-align: center;">swap argument/list-/dict-element under
 cursor with previous one (Python only)</td>
 <td style="text-align: center;">text-objects</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;tf</code></td>
 <td style="text-align: center;">find files</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;td</code></td>
 <td style="text-align: center;">search in current buffer (Document)</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;tw</code></td>
 <td style="text-align: center;">search in current directory
 (Workspace)</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>&lt;leader&gt;tw</code></td>
+<td style="text-align: center;">search current directory for selection
+(Workspace)</td>
+<td style="text-align: center;">telescope</td>
+<td style="text-align: center;">Visual</td>
 </tr>
 </tbody>
 </table>
@@ -698,6 +716,12 @@ workspace</td>
 <td style="text-align: center;"><code>&lt;leader&gt;s</code></td>
 <td style="text-align: center;">search inside selection</td>
 <td style="text-align: center;">Visual</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>&lt;leader&gt;n</code></td>
+<td style="text-align: center;">repeat last search with
+<code>invcaseignore</code></td>
+<td style="text-align: center;"></td>
 </tr>
 </tbody>
 </table>
