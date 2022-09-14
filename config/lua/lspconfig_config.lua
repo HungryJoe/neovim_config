@@ -49,7 +49,7 @@ return function()
   lsp.bashls.setup{
     cmd = { "bash-language-server", "start" },
     cmd_env = {
-      GLOB_PATTERN = "*@(.sh|.inc|.bash|.command)"
+      GLOB_PATTERN = "*@(.sh|.inc|.bash|.command|.fish)"
     },
     filetypes = {"sh"},
     -- cmp setup
@@ -141,5 +141,10 @@ return function()
         },
       },
     },
+  }
+
+  -- Elixir LS
+  require'lspconfig'.elixirls.setup {
+    cmd = { "/Users/skagan/Code/Third_Party_Software/elixir-ls/release/language_server.sh" }
   }
 end
