@@ -3,8 +3,8 @@
 
 return require('packer').startup(function()
   -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
-  use 'neovim/nvim-lspconfig'
+  use {'wbthomason/packer.nvim', config=require('packer_config')}
+  use {'neovim/nvim-lspconfig', config=require('lspconfig_config')()}
   use { 'L3MON4D3/LuaSnip' }
   use {
     'hrsh7th/nvim-cmp',
@@ -12,31 +12,35 @@ return require('packer').startup(function()
       'hrsh7th/cmp-nvim-lsp',
       'hrsh7th/cmp-buffer',
       'hrsh7th/cmp-path',
-    }
+    },
+    config=require('cmp_config')()
   }
   use {
     'nvim-treesitter/nvim-treesitter',
-    run = ':TSUpdate'
+    run = ':TSUpdate',
+    config=require('treesitter_config')()
   }
   use {
     'hoob3rt/lualine.nvim',
     requires = {
       'kyazdani42/nvim-web-devicons',
-      opt = true
-    }
+    },
+    config=require('lualine_config')()
   }
   use {
     'akinsho/nvim-bufferline.lua',
     branch = 'main',
-    requires = 'kyazdani42/nvim-web-devicons'
+    requires = 'kyazdani42/nvim-web-devicons',
+    config=require('bufferline_config')()
   }
   use {
     'lewis6991/gitsigns.nvim',
     requires = {
       'nvim-lua/plenary.nvim'
-    }
+    },
+    config=require('gitsigns_config')()
   }
-  use {'edluffy/specs.nvim'}
+  use {'edluffy/specs.nvim', config=require('specs_config')()}
   use {
     'nvim-treesitter/playground',
     requires = {
@@ -47,12 +51,15 @@ return require('packer').startup(function()
   use {
     "folke/trouble.nvim",
     requires = "kyazdani42/nvim-web-devicons",
+    config=require('trouble_config')()
   }
-  use 'ggandor/lightspeed.nvim'
-  use 'ray-x/lsp_signature.nvim'
+  use {'kyazdani42/nvim-web-devicons', config=require('web-devicons_config')()}
+  use {'ggandor/lightspeed.nvim', config=require('lightspeed_config')()}
+  use {'ray-x/lsp_signature.nvim', config=require('lsp_signature_config')()}
   use {
     "SmiteshP/nvim-gps",
-    requires = "nvim-treesitter/nvim-treesitter"
+    requires = "nvim-treesitter/nvim-treesitter",
+    config=require('gps_config')()
   }
   use "HungryJoe/nvim-treesitter-textobjects"
   use {
