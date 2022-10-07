@@ -356,6 +356,9 @@ if &compatible
   set nocompatible
 endif
 
+" Disable the mouse since it's enabled by default in Neovim
+set mouse=
+
 " Set two-space tab for some filetypes
 au FileType yaml,plantuml,typescript,lua,html set tabstop=2 shiftwidth=2
 
