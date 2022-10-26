@@ -1,6 +1,16 @@
 -- Cmp config
 -- Source: https://github.com/hrsh7th/nvim-cmp
 
+local lsp_var_comparator = function(entry1, entry2)
+  local lsp = require('cmp.types.lsp')
+  if entry1:get_kind() == lsp.CompletionItemKind.Variable then
+    return true
+  elseif entry2:get_kind() == lsp.CompletionItemKind.Variable then
+    return false
+  end
+  return nil
+end
+
 return function()
   vim.api.nvim_set_option("completeopt", "menu,menuone,noselect")
 
@@ -62,7 +72,7 @@ return function()
         compare.offset,
         compare.exact,
         compare.score,
-        compare.kind,
+        -- compare.kind,
         compare.sort_text,
         compare.length,
         compare.order,
