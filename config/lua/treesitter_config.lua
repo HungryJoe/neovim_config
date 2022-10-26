@@ -54,19 +54,19 @@ return function()
         enable = true,
         set_jumps = true,
         goto_next_start = {
-          ["J"] = {"@class.inner", "@function.inner"},
+          ["J"] = {query = {"@class.outer", "@function.outer"}},
         },
         goto_previous_start = {
-          ["K"] = {"@class.inner", "@function.inner"},
+          ["K"] = {query = {"@class.outer", "@function.outer"}},
         },
       },
       swap = {
         enable = true,
         swap_next = {
-          ["L"] = {"@parameter.inner"},
+          ["L"] = {query = {"@parameter.inner"}},
         },
         swap_previous = {
-          ["H"] = {"@parameter.inner"},
+          ["H"] = {query = {"@field"}},
         },
       },
       select = {
