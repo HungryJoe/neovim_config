@@ -30,7 +30,7 @@ return function()
       }
     },
     -- cmp setup
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   }
 
   -- Typescript LS
@@ -42,7 +42,7 @@ return function()
     },
     root_dir = lsp.util.root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
     -- cmp setup
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   }
 
   -- Bash/sh/fish LS
@@ -53,7 +53,7 @@ return function()
     },
     filetypes = {"sh"},
     -- cmp setup
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   }
 
   -- Docker LS
@@ -62,7 +62,7 @@ return function()
     filetypes = { "Dockerfile", "dockerfile" },
     root_dir = lsp.util.root_pattern("Dockerfile.*"),
     -- cmp setup
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   }
 
   -- Angular LS
@@ -77,16 +77,16 @@ return function()
     filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx" },
     root_dir = lsp.util.root_pattern("angular.json", ".git"),
     -- cmp setup
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   }
 
   -- Haskell LS
   lsp.hls.setup{
-    cmd = { "haskell-language-server-wrapper", "--lsp" },
+    cmd = { "haskell-language-server-wrapper", "--lsp", "--logfile=/Users/skagan/.cache/nvim/lsp.log"},
     filetypes = { "haskell", "lhaskell" },
     lspinfo = function(cfg)
       local extra = {}
-      function on_stdout(_, data, _)
+      local function on_stdout(_, data, _)
         local version = data[1]
         table.insert(extra, 'version:   ' .. version)
       end
@@ -106,7 +106,7 @@ return function()
       }
     },
     -- cmp setup
-    capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities()),
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   }
 
   -- Go LS
