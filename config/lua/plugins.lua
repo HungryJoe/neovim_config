@@ -3,7 +3,7 @@
 
 return require('packer').startup(function()
   -- Packer can manage itself
-  use {'wbthomason/packer.nvim', config=require('packer_config')}
+  use {'wbthomason/packer.nvim', config=require('packer_config')()}
   use {'neovim/nvim-lspconfig', config=require('lspconfig_config')()}
   use { 'L3MON4D3/LuaSnip' }
   use {

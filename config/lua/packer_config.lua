@@ -11,8 +11,8 @@
   end
 
 return function()
-  util = require'packer.util'
-  require'packer'.setup{
+  local util = require'packer.util'
+  require('packer').init{
     ensure_dependencies   = true, -- Should packer install plugin dependencies?
     package_root   = util.join_paths(vim.fn.stdpath('data'), 'site', 'pack'),
     compile_path = util.join_paths(vim.fn.stdpath('config'), 'plugin', 'packer_compiled.lua'),
