@@ -54,7 +54,8 @@ return require('packer').startup(function()
     config=require('trouble_config')()
   }
   use {'kyazdani42/nvim-web-devicons', config=require('web-devicons_config')()}
-  use {'ggandor/lightspeed.nvim', config=require('lightspeed_config')()}
+  use {'ggandor/leap.nvim', config=require('leap').add_default_mappings()}
+  use {'ggandor/flit.nvim', config=require('flit').setup{}, requires={'ggandor/leap.nvim'}}
   use {'ray-x/lsp_signature.nvim', config=require('lsp_signature_config')()}
   use {
     "SmiteshP/nvim-gps",
