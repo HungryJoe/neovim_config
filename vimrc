@@ -360,7 +360,7 @@ endif
 set mouse=
 
 " Set two-space tab for some filetypes
-au FileType yaml,plantuml,typescript,lua,html set tabstop=2 shiftwidth=2
+au FileType yaml,typescript,lua,html set tabstop=2 shiftwidth=2
 
 " Disable ' bracketing in plantuml files in commments
 au FileType plantuml Brackets! ' ' -visual=1 -context=comment
