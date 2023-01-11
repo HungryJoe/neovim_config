@@ -57,12 +57,7 @@ return require('packer').startup(function()
   use {'ggandor/leap.nvim', config=require('leap').add_default_mappings()}
   use {'ggandor/flit.nvim', config=require('flit').setup{}, requires={'ggandor/leap.nvim'}}
   use {'ray-x/lsp_signature.nvim', config=require('lsp_signature_config')()}
-  use {
-    "SmiteshP/nvim-gps",
-    requires = "nvim-treesitter/nvim-treesitter",
-    config=require('gps_config')()
-  }
-  use "HungryJoe/nvim-treesitter-textobjects"
+  use {"~/Code/Third_Party_Software/nvim-treesitter-textobjects", branch="add-operand"}
   use {
     "nvim-telescope/telescope.nvim",
     requires = {

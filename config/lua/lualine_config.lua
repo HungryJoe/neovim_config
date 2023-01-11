@@ -2,8 +2,6 @@
 -- See :h lualine for docs
 
 return function()
-  local gps = require("nvim-gps")
-
   -- set noshowmode  " Don't show mode below the statusline
   vim.api.nvim_set_option('showmode', false)
 
@@ -23,7 +21,7 @@ return function()
     },
     sections = {
       lualine_a = {{'filename', path = 3, shorting_target = 100}},
-      lualine_b = {{gps.get_location, cond = gps.is_available}},
+      lualine_b = {},
       lualine_c = {},
       lualine_x = {{'diagnostics', sources = {'nvim_diagnostic'}}},
       -- lualine_y = {'branch'},
