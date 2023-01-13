@@ -1,0 +1,8 @@
+-- Install plugins via Packer
+-- Link: https://github.com/wbthomason/packer.nvim
+
+return require('packer').startup(function()
+  -- Packer can manage itself
+  use {'wbthomason/packer.nvim', config=require('packer_config')()}
+  use {'ggandor/leap.nvim', config=require('leap').add_default_mappings()}
+end)
