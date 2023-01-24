@@ -1,5 +1,7 @@
 -- Install plugins via Packer
 -- Link: https://github.com/wbthomason/packer.nvim
+  -- use {'ggandor/flit.nvim', config=require('flit').setup{}, requires={'ggandor/leap.nvim'}}
+  -- use {'ggandor/leap.nvim', config=require('leap_config')()}
 
 return require('packer').startup(function()
   -- Packer can manage itself
@@ -54,11 +56,10 @@ return require('packer').startup(function()
     config=function() require('trouble_config') end
   }
   use {'kyazdani42/nvim-web-devicons', config=function() require('web-devicons_config')() end}
-  use {'ggandor/leap.nvim', config=function() require('leap_config')() end}
-  use {'ggandor/flit.nvim', config=function() require('flit').setup{} end, requires={'ggandor/leap.nvim'}}
   use {'ray-x/lsp_signature.nvim', config=function() require('lsp_signature_config')() end}
   -- use {"~/Code/Third_Party_Software/nvim-treesitter-textobjects", branch="add-operand"}
   use {"HungryJoe/nvim-treesitter-textobjects"}
+  use {'ggandor/lightspeed.nvim', config=function() require('lightspeed_config')() end}
   use {
     "nvim-telescope/telescope.nvim",
     requires = {
