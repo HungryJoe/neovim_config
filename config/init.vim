@@ -15,9 +15,7 @@ source ~/.vimrc
 " =========================
 
 " Install and configure plugins
-lua require('plugins')
-" Automatically install newly added plugins
-autocmd BufWritePost plugins.lua PackerInstall
+lua require('plugins')()
 
 " =================
 " Miscellaneous
