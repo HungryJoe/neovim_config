@@ -37,6 +37,9 @@ local PKGS = {
     "gbprod/yanky.nvim";
     "glepnir/lspsaga.nvim";
     "nguyenvukhang/nvim-toggler";
+    "jiangmiao/auto-pairs";
+    "aklt/plantuml-syntax";
+    {'gelguy/wilder.nvim',  run = ':UpdateRemotePlugins'};
   }
 
 local function configure_plugins()
@@ -52,6 +55,7 @@ local function configure_plugins()
   require('lsp_signature_config')()
   require('lightspeed_config')()
   -- vim.opt.runtimepath:append("~/Code/Third_Party_Software/nvim-treesitter-textobjects")
+  vim.opt.runtimepath:append("~/.local/share/vim/nginx_conf")
   require("nvim-surround").setup({
     keymaps = {
       insert = false,

@@ -310,38 +310,6 @@ function! VisualSelection(direction, extra_filter) range
 endfunction
 "=======================================================
 
-
-"=======================================
-" Vim-plug Plugin Management
-"=======================================
-let plug_file = $HOME . '/.vim/autoload/plug.vim'
-if empty(glob(plug_file))
-  silent execute '!curl -fLo '.plug_file.' --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
-endif
-
-call plug#begin($HOME . '/.local/share/vim/plugins')
-
-" Auto-pair brackets
-Plug 'jiangmiao/auto-pairs'
-
-" Cosmetic plugins
-Plug 'sainnhe/sonokai'
-
-" Syntax plugins
-Plug 'aklt/plantuml-syntax'
-Plug $HOME . '/.local/share/vim/nginx_conf'
-
-" Misc. plugins
-if has('nvim')
-  Plug 'gelguy/wilder.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'gelguy/wilder.nvim'
-endif
-
-
-call plug#end()
-
 "======================================
 " Sam's misc. config
 "======================================
@@ -364,57 +332,7 @@ au FileType yaml,typescript,lua,html set tabstop=2 shiftwidth=2
 " Enable full spellcheck in txt and md files
 au FileType markdown,text set spell spelllang=en_us
 
-" Wilder config
-" Set up Python provider
-let g:python3_host_prog = $HOME . '/.asdf/installs/python/3.9.2/bin/python'
-" Source: https://github.com/gelguy/wilder.nvim#fuzzy-config-for-neovim-or-vim-with-yarp
-call wilder#setup({'modes': [':', '/', '?']})
-if has("nvim")
-    call wilder#set_option('pipeline', [
-          \   wilder#branch(
-          \     wilder#cmdline_pipeline({
-          \       'fuzzy': 1,
-          \       'set_pcre2_pattern': has('nvim'),
-          \     }),
-          \     wilder#python_search_pipeline({
-          \       'pattern': 'fuzzy',
-          \     }),
-          \   ),
-          \ ])
-    let s:highlighters = [
-            \ wilder#pcre2_highlighter(),
-            \ wilder#basic_highlighter(),
-            \ ]
-    call wilder#set_option('renderer', wilder#renderer_mux({
-          \ ':': wilder#popupmenu_renderer({
-          \   'highlighter': s:highlighters,
-          \ }),
-          \ '/': wilder#wildmenu_renderer({
-          \   'highlighter': s:highlighters,
-          \ }),
-          \ }))
-else
-    call wilder#set_option('pipeline', [
-          \   wilder#branch(
-          \     wilder#cmdline_pipeline(),
-          \     wilder#search_pipeline(),
-          \   ),
-          \ ])
-
-    call wilder#set_option('renderer', wilder#wildmenu_renderer({
-          \ 'highlighter': wilder#basic_highlighter(),
-          \ }))
-endif
-
 " Colorscheme config
 if has('termguicolors')
   set termguicolors
 endif
-" Overwritten for Neovim (see .config/nvim/init.vim)
-let g:sonokai_enable_italic = 1
-let g:sonokai_disable_italic_comment = 1
-let g:sonokai_better_performance = 1
-let g:sonokai_diagnostic_virtual_text = 'colored'
-let g:sonokai_sign_column_background = 'none'
-
-colorscheme sonokai
