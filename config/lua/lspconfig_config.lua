@@ -112,6 +112,7 @@ return function()
   -- Go LS
   require'lspconfig'.gopls.setup{
     cmd = {"/Users/skagan/go/bin/gopls", "serve"},
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   }
 
   -- Lua LS
@@ -141,6 +142,7 @@ return function()
         },
       },
     },
+    capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities()),
   }
 
   -- Elixir LS
