@@ -18,25 +18,25 @@ return function()
   vim.api.nvim_set_keymap("n", "gp", "<CMD>BufferLinePick<CR>", opts)
 
   -- Diagnostic
-  vim.api.nvim_set_keymap("n", t"<leader>dj", "<CMD>lua vim.diagnostic.goto_next()<CR>",
+  vim.api.nvim_set_keymap("n", t"<leader>dj", "<CMD>lua require'lspsaga.diagnostic':goto_next()<CR>",
     opts
   )
-  vim.api.nvim_set_keymap("n", t"<leader>dk", "<CMD>lua vim.diagnostic.goto_prev()<CR>",
+  vim.api.nvim_set_keymap("n", t"<leader>dk", "<CMD>lua require'lspsaga.diagnostic':goto_prev()<CR>",
     opts
   )
 
   -- LSP
-  vim.api.nvim_set_keymap("n", t"<leader>dd", "<CMD>lua vim.lsp.buf.definition()<CR>",
+  vim.api.nvim_set_keymap("n", t"<leader>dd", "<CMD>Lspsaga goto_definition<CR>",
     opts
   )
   vim.api.nvim_set_keymap("n", t"<leader>di",
-    "<CMD>lua vim.lsp.buf.code_action()<CR>",
+    "<CMD>Lspsaga code_action<CR>",
     opts
   )
-  vim.api.nvim_set_keymap("n", t"<leader>dr", "<CMD>lua vim.lsp.buf.rename()<CR>",
+  vim.api.nvim_set_keymap("n", t"<leader>dr", "<CMD>Lspsaga rename<CR>",
     opts
   )
-  vim.api.nvim_set_keymap("n", t"<leader>dh", "<CMD>lua vim.lsp.buf.hover()<CR>",
+  vim.api.nvim_set_keymap("n", t"<leader>dh", "<CMD>Lspsaga hover_doc<CR>",
     opts
   )
 
@@ -71,4 +71,8 @@ return function()
   vim.api.nvim_set_keymap("n", t"<leader>td", "<CMD>Telescope current_buffer_fuzzy_find<CR>", opts)
   vim.api.nvim_set_keymap("n", t"<leader>tw", "<CMD>Telescope live_grep<CR>", opts)
   vim.api.nvim_set_keymap("v", t"<leader>tw", "<CMD>Telescope grep_string<CR>", opts)
+  vim.api.nvim_set_keymap("n", t"<leader>tp", "<CMD>Telescope yank_history<CR>", opts)
+
+  -- Yanky
+  vim.api.nvim_set_keymap("n", "y", "<Plug>(YankyYank)", opts)
 end

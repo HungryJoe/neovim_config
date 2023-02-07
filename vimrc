@@ -323,8 +323,7 @@ endif
 call plug#begin($HOME . '/.local/share/vim/plugins')
 
 " Auto-pair brackets
-Plug 'LucHermitte/lh-brackets'
-Plug 'LucHermitte/lh-vim-lib'
+Plug 'jiangmiao/auto-pairs'
 
 " Cosmetic plugins
 Plug 'sainnhe/sonokai'
@@ -362,17 +361,8 @@ set mouse=
 " Set two-space tab for some filetypes
 au FileType yaml,typescript,lua,html set tabstop=2 shiftwidth=2
 
-" Disable ' bracketing in plantuml files in commments
-au FileType plantuml Brackets! ' ' -visual=1 -context=comment
-
 " Enable full spellcheck in txt and md files
 au FileType markdown,text set spell spelllang=en_us
-
-" lh-bracket config
-let g:marker_define_jump_mappings = 0
-let g:usemarks = 0
-let g:marker_highlight = ""
-let g:cb_disable_default = {'{': 'n', '(': 'n', '<leader>{': 'vn', '<leader>[': 'n', '""': 'n', "''": 'n'}
 
 " Wilder config
 " Set up Python provider
