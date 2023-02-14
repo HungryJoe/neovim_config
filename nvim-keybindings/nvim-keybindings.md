@@ -73,8 +73,6 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `Z` | sneak-search above cursor | lightspeed | Operator-Pending
 `J` | goto next major section of code (Python & TS only) | text-objects
 `K` | goto previous major section of code (Python & TS only) | text-objects
-`L` | swap argument/list-/dict-element under cursor with next one (Python only) | text-objects
-`H` | swap argument/list-/dict-element under cursor with previous one (Python only) | text-objects
 `<leader>tf` | find files | telescope
 `<leader>td` | search in current buffer (Document) | telescope
 `<leader>tw` | search in current directory (Workspace) | telescope
@@ -88,8 +86,8 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `<leader>dr` | rename current word in entire LSP workspace | lspsaga
 `y`| yank characters in motion | yanky
 `<leader>g` | Insert docstring snippet for current function/class/module | neogen
-`<C-,>` | Swap treesitter sibling to the left | sibling-swap
-`<C-.>` | Swap treesitter sibling to the right | sibling-swap
+`H` | Swap treesitter sibling to the left | sibling-swap
+`L` | Swap treesitter sibling to the right | sibling-swap
 
 ## Custom Bindings
 

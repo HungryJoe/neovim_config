@@ -78,4 +78,8 @@ return function()
 
   -- Neogen
   vim.keymap.set("n", "<leader>g", require'neogen'.generate, opts)
+
+  -- Sibling-swap
+  vim.keymap.set("n", "H", require'sibling-swap'.swap_with_left, opts)
+  vim.keymap.set("n", "L", require'sibling-swap'.swap_with_right, opts)
 end

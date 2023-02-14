@@ -61,13 +61,7 @@ return function()
         },
       },
       swap = {
-        enable = true,
-        swap_next = {
-          ["L"] = {query = {"@parameter.inner"}},
-        },
-        swap_previous = {
-          ["H"] = {query = {"@field"}},
-        },
+        enable = false,
       },
       select = {
         lookahead = true,
