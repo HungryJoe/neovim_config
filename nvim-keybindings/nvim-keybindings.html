@@ -7,9 +7,6 @@
   <title>Neovim Keybindings</title>
   <style>
     html {
-      line-height: 1.5;
-      font-family: Georgia, serif;
-      font-size: 20px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
@@ -28,13 +25,16 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 1em;
+        padding: 12px;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
+      html {
+        background-color: white;
+      }
       body {
         background-color: transparent;
         color: black;
@@ -84,9 +84,10 @@
       color: #606060;
     }
     code {
-      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
       font-size: 85%;
       margin: 0;
+      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -149,7 +150,7 @@
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: 1;}
+    div.column{flex: auto; overflow-x: auto;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -297,111 +298,106 @@ character-wise</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="even">
-<td style="text-align: center;"><code>y</code></td>
-<td style="text-align: center;">yank characters in motion</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
 <td style="text-align: center;"><code>u</code></td>
 <td style="text-align: center;">undo</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>i</code></td>
 <td style="text-align: center;">insert before cursor</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>p</code></td>
 <td style="text-align: center;">put text in register after cursor</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>P</code></td>
 <td style="text-align: center;">put text in register before cursor</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>h</code></td>
 <td style="text-align: center;">move to prev char</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>H</code></td>
 <td style="text-align: center;">move to top of window</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>j</code></td>
 <td style="text-align: center;">move to next line</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>k</code></td>
 <td style="text-align: center;">move to prev line</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>l</code></td>
 <td style="text-align: center;">move to next char</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>L</code></td>
 <td style="text-align: center;">move to bottom of window</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>za</code></td>
 <td style="text-align: center;">toggle fold at cursor</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>zA</code></td>
 <td style="text-align: center;">recursively toggle all folds at
 cursor</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>zr</code></td>
 <td style="text-align: center;">reduce folding of entire window
 (increase <code>foldlevel</code>) by <code>1</code></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>zR</code></td>
 <td style="text-align: center;">open all folds in window, setting
 <code>foldlevel</code> to max</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>zm</code></td>
 <td style="text-align: center;">close all of the next level of folds in
 window, decreasing <code>foldlevel</code> by <code>1</code></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>zM</code></td>
 <td style="text-align: center;">close all folds in window, setting
 <code>foldlevel</code> to <code>0</code></td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>zz</code></td>
 <td style="text-align: center;">center current line in window</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>:</code></td>
 <td style="text-align: center;">enter command mode</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>n</code></td>
 <td style="text-align: center;">repeat last search</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>/</code></td>
 <td style="text-align: center;">enter command mode to search</td>
 <td style="text-align: center;"></td>
@@ -478,135 +474,208 @@ references</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
+<td style="text-align: center;"><code>&lt;leader&gt;dt</code></td>
+<td style="text-align: center;">goto type definition of current
+word</td>
+<td style="text-align: center;">trouble</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;jj</code></td>
 <td style="text-align: center;">goto next Git hunk</td>
 <td style="text-align: center;">gitsigns</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;jk</code></td>
 <td style="text-align: center;">goto previous Git hunk</td>
 <td style="text-align: center;">gitsigns</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;jp</code></td>
 <td style="text-align: center;">preview current Git hunk</td>
 <td style="text-align: center;">gitsigns</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;jl</code></td>
 <td style="text-align: center;">toggle Git current-line blame</td>
 <td style="text-align: center;">gitsigns</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;jr</code></td>
 <td style="text-align: center;">reset current Git hunk</td>
 <td style="text-align: center;">gitsigns</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td
 style="text-align: center;"><code>&lt;Tab&gt;&lt;S-Tab&gt;</code></td>
 <td style="text-align: center;">scroll completion options</td>
 <td style="text-align: center;">cmp</td>
 <td style="text-align: center;">Insert</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;pp</code></td>
 <td style="text-align: center;">toggle treesitter playground</td>
 <td style="text-align: center;">treesitter playground</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>s</code></td>
 <td style="text-align: center;">sneak-search below cursor</td>
 <td style="text-align: center;">lightspeed</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>S</code></td>
 <td style="text-align: center;">sneak-search above cursor</td>
 <td style="text-align: center;">lightspeed</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>z</code></td>
 <td style="text-align: center;">sneak-search below cursor</td>
 <td style="text-align: center;">lightspeed</td>
 <td style="text-align: center;">Operator-Pending</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>Z</code></td>
 <td style="text-align: center;">sneak-search above cursor</td>
 <td style="text-align: center;">lightspeed</td>
 <td style="text-align: center;">Operator-Pending</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>J</code></td>
 <td style="text-align: center;">goto next major section of code (Python
 &amp; TS only)</td>
 <td style="text-align: center;">text-objects</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>K</code></td>
 <td style="text-align: center;">goto previous major section of code
 (Python &amp; TS only)</td>
 <td style="text-align: center;">text-objects</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>L</code></td>
 <td style="text-align: center;">swap argument/list-/dict-element under
 cursor with next one (Python only)</td>
 <td style="text-align: center;">text-objects</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>H</code></td>
 <td style="text-align: center;">swap argument/list-/dict-element under
 cursor with previous one (Python only)</td>
 <td style="text-align: center;">text-objects</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;tf</code></td>
 <td style="text-align: center;">find files</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;td</code></td>
 <td style="text-align: center;">search in current buffer (Document)</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;tw</code></td>
 <td style="text-align: center;">search in current directory
 (Workspace)</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;tw</code></td>
 <td style="text-align: center;">search current directory for selection
 (Workspace)</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;">Visual</td>
 </tr>
+<tr class="odd">
+<td style="text-align: center;"><code>&lt;leader&gt;tp</code></td>
+<td style="text-align: center;">search yank history</td>
+<td style="text-align: center;">telescope &amp; yanky</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>&lt;leader&gt;dj</code></td>
+<td style="text-align: center;">goto next diagnostic</td>
+<td style="text-align: center;">lspsaga</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>&lt;leader&gt;dk</code></td>
+<td style="text-align: center;">goto previous diagnostic</td>
+<td style="text-align: center;">lspsaga</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>&lt;leader&gt;dd</code></td>
+<td style="text-align: center;">goto LSP definition of current word</td>
+<td style="text-align: center;">lspsaga</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>&lt;leader&gt;dh</code></td>
+<td style="text-align: center;">show type of current word if it’s an LSP
+variable or function/method</td>
+<td style="text-align: center;">lspsaga</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>&lt;leader&gt;di</code></td>
+<td style="text-align: center;">show LSP code actions for current
+word</td>
+<td style="text-align: center;">lspsaga</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>&lt;leader&gt;dr</code></td>
+<td style="text-align: center;">rename current word in entire LSP
+workspace</td>
+<td style="text-align: center;">lspsaga</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>y</code></td>
+<td style="text-align: center;">yank characters in motion</td>
+<td style="text-align: center;">yanky</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>&lt;leader&gt;g</code></td>
+<td style="text-align: center;">Insert docstring snippet for current
+function/class/module</td>
+<td style="text-align: center;">neogen</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;"><code>&lt;C-,&gt;</code></td>
+<td style="text-align: center;">Swap treesitter sibling to the left</td>
+<td style="text-align: center;">sibling-swap</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;"><code>&lt;C-.&gt;</code></td>
+<td style="text-align: center;">Swap treesitter sibling to the
+right</td>
+<td style="text-align: center;">sibling-swap</td>
+<td style="text-align: center;"></td>
+</tr>
 </tbody>
 </table>
 <h2 id="custom-bindings">Custom Bindings</h2>
 <table>
-<colgroup>
-<col style="width: 28%" />
-<col style="width: 20%" />
-<col style="width: 51%" />
-</colgroup>
 <thead>
 <tr class="header">
 <th style="text-align: center;">Key sequence</th>
@@ -624,52 +693,6 @@ cursor with previous one (Python only)</td>
 <td style="text-align: center;"><code>;</code></td>
 <td style="text-align: center;">enter command mode (i.e. equivalent to
 <code>:</code>)</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>&lt;leader&gt;dj</code></td>
-<td style="text-align: center;">goto next LSP diagnostic</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>&lt;leader&gt;dk</code></td>
-<td style="text-align: center;">goto previous LSP diagnostic</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>&lt;leader&gt;dd</code></td>
-<td style="text-align: center;">goto definition of current word
-(LSP)</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>&lt;leader&gt;dt</code></td>
-<td style="text-align: center;">goto type definition of current word
-(LSP)</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>&lt;leader&gt;ds</code></td>
-<td style="text-align: center;">show LSP signature help for current
-word</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>&lt;leader&gt;dh</code></td>
-<td style="text-align: center;">show type of current word if it’s an LSP
-variable or function/method</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;"><code>&lt;leader&gt;di</code></td>
-<td style="text-align: center;">show LSP code actions for current
-word</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;"><code>&lt;leader&gt;dr</code></td>
-<td style="text-align: center;">rename current word in entire LSP
-workspace</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
@@ -713,7 +736,7 @@ workspace</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
-<td style="text-align: center;"><code>&lt;leader&gt;s</code></td>
+<td style="text-align: center;"><code>&lt;leader&gt;d</code></td>
 <td style="text-align: center;">search inside selection</td>
 <td style="text-align: center;">Visual</td>
 </tr>

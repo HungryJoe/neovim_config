@@ -26,7 +26,6 @@ Key sequence | Action | Mode (if not `Normal`)
 `#`| search for current word
 `$`| move to end of current line
 `~`| change case of current character
-`y`| yank characters in motion
 `u`| undo
 `i`| insert before cursor
 `p`| put text in register after cursor
@@ -60,6 +59,7 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `<leader>rd` | open Trouble display for document LSP diagnostics | trouble
 `<leader>rw` | open Trouble display for workspace LSP diagnostics | trouble
 `<leader>re` | open Trouble display for LSP references | trouble
+`<leader>dt` | goto type definition of current word | trouble
 `<leader>jj` | goto next Git hunk | gitsigns
 `<leader>jk` | goto previous Git hunk | gitsigns
 `<leader>jp` | preview current Git hunk | gitsigns
@@ -79,6 +79,17 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `<leader>td` | search in current buffer (Document) | telescope
 `<leader>tw` | search in current directory (Workspace) | telescope
 `<leader>tw` | search current directory for selection (Workspace) | telescope | Visual
+`<leader>tp` | search yank history | telescope & yanky
+`<leader>dj` | goto next diagnostic | lspsaga
+`<leader>dk` | goto previous diagnostic | lspsaga
+`<leader>dd` | goto LSP definition of current word | lspsaga
+`<leader>dh` | show type of current word if it's an LSP variable or function/method | lspsaga
+`<leader>di` | show LSP code actions for current word | lspsaga
+`<leader>dr` | rename current word in entire LSP workspace | lspsaga
+`y`| yank characters in motion | yanky
+`<leader>g` | Insert docstring snippet for current function/class/module | neogen
+`<C-,>` | Swap treesitter sibling to the left | sibling-swap
+`<C-.>` | Swap treesitter sibling to the right | sibling-swap
 
 ## Custom Bindings
 
@@ -86,14 +97,6 @@ Key sequence | Action | Mode (if not `Normal`)
 :-----------:|:-------:|:---------------------:
 `Space` | leader
 `;` | enter command mode (i.e. equivalent to `:`)
-`<leader>dj` | goto next LSP diagnostic
-`<leader>dk` | goto previous LSP diagnostic
-`<leader>dd` | goto definition of current word (LSP)
-`<leader>dt` | goto type definition of current word (LSP)
-`<leader>ds` | show LSP signature help for current word
-`<leader>dh` | show type of current word if it's an LSP variable or function/method
-`<leader>di` | show LSP code actions for current word
-`<leader>dr` | rename current word in entire LSP workspace
 `<leader>q` | quit
 `<leader>fw` | write current buffer/file
 `<leader>ff` | close current buffer/file
