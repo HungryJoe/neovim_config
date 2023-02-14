@@ -37,12 +37,17 @@ local PKGS = {
     "gbprod/yanky.nvim";
     "glepnir/lspsaga.nvim";
     "nguyenvukhang/nvim-toggler";
-    "jiangmiao/auto-pairs";
     "aklt/plantuml-syntax";
     {'gelguy/wilder.nvim',  run = ':UpdateRemotePlugins'};
+    "danymat/neogen";
+    "windwp/nvim-autopairs";
   }
 
 local function configure_plugins()
+  vim.opt.runtimepath:append("~/Code/Third_Party_Software/sibling-swap.nvim")
+  -- vim.opt.runtimepath:append("~/Code/Third_Party_Software/nvim-treesitter-textobjects")
+  vim.opt.runtimepath:append("~/.local/share/vim/nginx_conf")
+
   require('lspconfig_config')()
   require('cmp_config')()
   require('treesitter_config')()
@@ -54,57 +59,14 @@ local function configure_plugins()
   require('web-devicons_config')()
   require('lsp_signature_config')()
   require('lightspeed_config')()
-  -- vim.opt.runtimepath:append("~/Code/Third_Party_Software/nvim-treesitter-textobjects")
-  vim.opt.runtimepath:append("~/.local/share/vim/nginx_conf")
-  require("nvim-surround").setup({
-    keymaps = {
-      insert = false,
-      insert_line = false,
-      normal = "<leader>ss",
-      normal_line = "<leader>sS",
-      visual = "<leader>s",
-      visual_line = "<leader>S",
-      delete = "<leader>sd",
-      change = "<leader>sc",
-    },
-    aliases = {
-        ["a"] = ")",
-        ["d"] = "}",
-        ["f"] = "]",
-        ["g"] = "\"",
-        ["q"] = { '"', "'", "`" },
-        ["s"] = { "}", "]", ")", ">", '"', "'", "`" },
-    },
-  })
-  require("which-key").setup{
-    plugins = {
-      spelling = {
-        enabled = true;
-      }
-    }
-  }
-  vim.opt.runtimepath:append("~/Code/Third_Party_Software/sibling-swap.nvim")
-  require('sibling-swap').setup({
-    require_siblings_on_same_line = false
-  })
-  require('yanky').setup({
-    highlight = {
-      timer = 250
-    }
-  })
-  require('telescope').load_extension('yank_history')
-  require'lspsaga'.setup{
-    symbol_in_winbar = {
-      separator = " ",
-      show_file = false,
-    },
-  }
-  require'nvim-toggler'.setup{
-    inverses = {
-      ['>'] = '<',
-      ['True'] = 'False',
-    }
-  }
+  require('surround_config')()
+  require('sibling_swap_config')()
+  require('yanky_config')()
+  require('lsp_saga_config')()
+  require('toggler_config')()
+  require('neogen_config')()
+  require('autopairs_config')()
+  require('which_key_config')()
 end
 
 local function clone_paq()

@@ -75,4 +75,7 @@ return function()
 
   -- Yanky
   vim.api.nvim_set_keymap("n", "y", "<Plug>(YankyYank)", opts)
+
+  -- Neogen
+  vim.keymap.set("n", "<leader>g", require'neogen'.generate, opts)
 end
