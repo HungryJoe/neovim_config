@@ -105,7 +105,7 @@ set lazyredraw
 set magic
 
 " Easily find and replace inside a visual selection
-vnoremap <leader>s :<BS><BS><BS><BS><BS>%s/\%V
+vnoremap <leader>d :<BS><BS><BS><BS><BS>%s/\%V
 
 " Show matching brackets when text indicator is over them
 set showmatch 

@@ -102,5 +102,5 @@ Key sequence | Action | Mode (if not `Normal`)
 `<leader>wk` | move cursor to window above
 `<leader>wh` | move cursor to window to left
 `<leader>wl` | move cursor to window to right
-`<leader>s` | search inside selection | Visual
+`<leader>d` | search inside selection | Visual
 `<leader>n` | repeat last search with `invcaseignore`
