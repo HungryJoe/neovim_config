@@ -116,18 +116,12 @@ return function()
   }
 
   -- Lua LS
-  local runtime_path = vim.split(package.path, ';')
-  table.insert(runtime_path, "lua/?.lua")
-  table.insert(runtime_path, "lua/?/init.lua")
-
-  require'lspconfig'.sumneko_lua.setup {
+  require'lspconfig'.lua_ls.setup {
     settings = {
       Lua = {
         runtime = {
           -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
           version = 'LuaJIT',
-          -- Setup your lua path
-          path = runtime_path,
         },
         diagnostics = {
           -- Get the language server to recognize the `vim` global
@@ -149,4 +143,7 @@ return function()
   require'lspconfig'.elixirls.setup {
     cmd = { "/Users/skagan/Code/Third_Party_Software/elixir-ls/release/language_server.sh" }
   }
+
+  -- OCaml LS
+  require'lspconfig'.ocamllsp.setup{}
 end
