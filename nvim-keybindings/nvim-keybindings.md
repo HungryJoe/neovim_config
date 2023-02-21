@@ -88,6 +88,7 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `<leader>g` | Insert docstring snippet for current function/class/module | neogen
 `H` | Swap treesitter sibling to the left | sibling-swap
 `L` | Swap treesitter sibling to the right | sibling-swap
+`Ctrl-l` | Expand current snippet node or jump to next  | Luasnip | Insert
 
 ## Custom Bindings
 

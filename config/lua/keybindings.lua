@@ -82,4 +82,7 @@ return function()
   -- Sibling-swap
   vim.keymap.set("n", "H", require'sibling-swap'.swap_with_left, opts)
   vim.keymap.set("n", "L", require'sibling-swap'.swap_with_right, opts)
+
+  -- Luasnip
+  vim.keymap.set("i", "<C-l>", require'luasnip'.expand_or_jump, opts)
 end
