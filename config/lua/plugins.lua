@@ -33,7 +33,7 @@ local PKGS = {
     {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'};
     "kylechui/nvim-surround";
     "folke/which-key.nvim";
-    -- "Wansmer/sibling-swap.nvim";
+    "Wansmer/sibling-swap.nvim";
     "gbprod/yanky.nvim";
     "glepnir/lspsaga.nvim";
     "nguyenvukhang/nvim-toggler";
@@ -44,7 +44,6 @@ local PKGS = {
   }
 
 local function configure_plugins()
-  vim.opt.runtimepath:append("~/Code/Third_Party_Software/sibling-swap.nvim")
   -- vim.opt.runtimepath:append("~/Code/Third_Party_Software/nvim-treesitter-textobjects")
   vim.opt.runtimepath:append("~/.local/share/vim/nginx_conf")
 
