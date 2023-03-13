@@ -64,23 +64,10 @@ return function()
         enable = false,
       },
       select = {
-        lookahead = true,
-        enable = true,
-        keymaps = {
-          -- You can use the capture groups defined in textobjects.scm
-          ["hf"] = "@function.outer",
-          ["hF"] = "@function.inner",
-          ["hc"] = "@class.outer",
-          ["hC"] = "@class.inner",
-        },
+        enable = false,
       },
       lsp_interop = {
-        enable = true,
-        border = "none",
-        peek_definition_code = {
-          ["<leader>hh"] = "@function.outer",
-          ["<leader>HH"] = "@class.outer",
-        },
+        enable = false,
       },
     },
     matchup = {
