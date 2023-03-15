@@ -26,7 +26,8 @@ return function()
         diagnosticMode = "workspace",
         useLibraryCodeForTypes = true,
         autoImportCompletions = true,
-      }
+      },
+      venvPath = "~/.venvs"
       }
     },
     -- cmp setup
