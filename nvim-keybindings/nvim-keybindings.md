@@ -31,11 +31,9 @@ Key sequence | Action | Mode (if not `Normal`)
 `p`| put text in register after cursor
 `P`| put text in register before cursor
 `h`| move to prev char
-`H`| move to top of window
 `j`| move to next line
 `k`| move to prev line
 `l`| move to next char
-`L`| move to bottom of window
 `za` | toggle fold at cursor
 `zA` | recursively toggle all folds at cursor
 `zr` | reduce folding of entire window (increase `foldlevel`) by `1`
@@ -71,8 +69,10 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `S` | sneak-search above cursor | lightspeed
 `z` | sneak-search below cursor | lightspeed | Operator-Pending
 `Z` | sneak-search above cursor | lightspeed | Operator-Pending
-`J` | goto next major section of code (Python & TS only) | text-objects
-`K` | goto previous major section of code (Python & TS only) | text-objects
+`J` | goto start of next major section of code (Python & TS only) | treesitter-textobjects
+`JJ` | goto end of next major section of code (Python & TS only) | treesitter-textobjects
+`K` | goto start of previous major section of code (Python & TS only) | treesitter-textobjects
+`KK` | goto end of previous major section of code (Python & TS only) | treesitter-textobjects
 `<leader>tf` | find files | telescope
 `<leader>td` | search in current buffer (Document) | telescope
 `<leader>tw` | search in current directory (Workspace) | telescope
