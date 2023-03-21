@@ -36,6 +36,7 @@ return function()
   vim.keymap.set("n", "<leader>dh", "<CMD>Lspsaga hover_doc<CR>",
     opts
   )
+  vim.keymap.set("n", "<leader>do", "<CMD>Lspsaga outline<CR>", opts)
 
   -- Trouble
   vim.keymap.set("n", "<leader>rr", "<CMD>TroubleToggle<CR>", opts)

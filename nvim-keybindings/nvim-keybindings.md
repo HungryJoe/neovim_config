@@ -84,6 +84,7 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `<leader>dh` | show type of current word if it's an LSP variable or function/method | lspsaga
 `<leader>di` | show LSP code actions for current word | lspsaga
 `<leader>dr` | rename current word in entire LSP workspace | lspsaga
+`<leader>do` | open LSP outline for current buffer | lspsaga
 `y`| yank characters in motion | yanky
 `<leader>g` | Insert docstring snippet for current function/class/module | neogen
 `H` | Swap treesitter sibling to the left | sibling-swap
