@@ -52,7 +52,7 @@ return function()
     "<CMD>Trouble lsp_references<CR>",
     opts
   )
-  vim.keymap.set("n", "<leader>di", "<CMD>Trouble lsp_type_definitions<CR>", opts)
+  vim.keymap.set("n", "<leader>dt", "<CMD>Trouble lsp_type_definitions<CR>", opts)
 
   -- Gitsigns
   vim.keymap.set("n", "<leader>jj", require"gitsigns.actions".next_hunk, opts)
