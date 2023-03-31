@@ -7,5 +7,16 @@ return function ()
       separator = " ",
       show_file = false,
     },
+    lightbulb = {
+      enable_in_insert = false
+    },
+    outline = {
+      keys = {
+        expand_or_jump = "<Tab>",
+      },
+    },
+    beacon = {
+      enabled = false,
+    },
   }
 end
