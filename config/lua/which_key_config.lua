@@ -6,7 +6,8 @@ return function ()
     plugins = {
       spelling = {
         enabled = true;
-      }
+      },
+      registers = false
     }
   }
 end
