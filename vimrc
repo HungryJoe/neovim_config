@@ -170,8 +170,12 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-set ai "Auto indent
-set si "Smart indent
+" Disable auto-indenting
+set noautoindent
+set nosmartindent
+set nocindent
+autocmd FileType * setlocal indentexpr= " Clear indentexpr after filetype plugin has loaded
+
 set wrap "Wrap lines
 
 
