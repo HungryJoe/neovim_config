@@ -170,10 +170,11 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Disable auto-indenting
-set noautoindent
-set nosmartindent
+" Auto-indent
+set autoindent " Copies indent from last line
+" Disable "smart" auto-indenting, let treesitter handle that
 set nocindent
+set nosmartindent
 autocmd FileType * setlocal indentexpr= " Clear indentexpr after filetype plugin has loaded
 
 set wrap "Wrap lines

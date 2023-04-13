@@ -24,7 +24,7 @@ return function()
       keymaps = {},
     },
     indent = {
-      enable = false,
+      enable = true,
     },
     playground = {
       enable = true,
