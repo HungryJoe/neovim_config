@@ -89,7 +89,7 @@ return function()
 
 
   -- inject reST syntax highlighting into python docstrings
-  require("vim.treesitter.query").set_query("python", "injections", [[
+  require("vim.treesitter.query").set("python", "injections", [[
   ((call
     function: (attribute
       object: (identifier) @_re)
