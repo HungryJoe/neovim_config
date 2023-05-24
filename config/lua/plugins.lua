@@ -41,6 +41,7 @@ local PKGS = {
     {'gelguy/wilder.nvim',  run = ':UpdateRemotePlugins'};
     "danymat/neogen";
     "windwp/nvim-autopairs";
+    "stevearc/dressing.nvim";
   }
 
 local function configure_plugins()
@@ -66,6 +67,7 @@ local function configure_plugins()
   require('neogen_config')()
   require('autopairs_config')()
   require('which_key_config')()
+  require('dressing_config')()
 end
 
 local function clone_paq()

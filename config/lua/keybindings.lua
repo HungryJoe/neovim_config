@@ -69,10 +69,14 @@ return function()
   vim.keymap.set("n", "<leader>td", require"telescope.builtin".current_buffer_fuzzy_find, opts)
   vim.keymap.set("n", "<leader>tw", require"telescope.builtin".live_grep, opts)
   vim.keymap.set("v", "<leader>tw", require"telescope.builtin".grep_string, opts)
-  vim.keymap.set("n", "<leader>tp", "<CMD> Telescope yank_history<CR>", opts)
 
   -- Yanky
-  vim.keymap.set("n", "y", "<Plug>(YankyYank)", opts)
+  vim.keymap.set({"n","x"}, "y", "<Plug>(YankyYank)", opts)
+  vim.keymap.set({"n","x"}, "p", "<Plug>(YankyPutAfter)")
+  vim.keymap.set({"n","x"}, "P", "<Plug>(YankyPutBefore)")
+  vim.keymap.set({"n","x"}, "gp", "<Plug>(YankyGPutAfter)")
+  vim.keymap.set({"n","x"}, "gP", "<Plug>(YankyGPutBefore)")
+  vim.keymap.set("n", "<leader>tp", "<CMD>YankyRingHistory<CR>", opts)
 
   -- Neogen
   vim.keymap.set("n", "<leader>g", require'neogen'.generate, opts)
