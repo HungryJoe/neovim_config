@@ -1,4 +1,3 @@
-#!/usr/local/bin/fish
 # Generate nvim keybindings HTML document from markdown and stylesheet
 # Author: Sam Kagan
 # Last Modified: 9/22/2021
