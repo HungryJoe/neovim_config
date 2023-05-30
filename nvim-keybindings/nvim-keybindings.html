@@ -7,6 +7,9 @@
   <title>Neovim Keybindings</title>
   <style>
     html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
       color: #1a1a1a;
       background-color: #fdfdfd;
     }
@@ -25,16 +28,13 @@
     @media (max-width: 600px) {
       body {
         font-size: 0.9em;
-        padding: 12px;
+        padding: 1em;
       }
       h1 {
         font-size: 1.8em;
       }
     }
     @media print {
-      html {
-        background-color: white;
-      }
       body {
         background-color: transparent;
         color: black;
@@ -84,10 +84,9 @@
       color: #606060;
     }
     code {
-      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
       font-size: 85%;
       margin: 0;
-      hyphens: manual;
     }
     pre {
       margin: 1em 0;
@@ -566,109 +565,115 @@ code (Python &amp; TS only)</td>
 <td style="text-align: center;"></td>
 </tr>
 <tr class="odd">
+<td style="text-align: center;"><code>&lt;leader&gt;tj</code></td>
+<td style="text-align: center;">find jumplist jump</td>
+<td style="text-align: center;">telescope</td>
+<td style="text-align: center;"></td>
+</tr>
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;tf</code></td>
 <td style="text-align: center;">find files</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;td</code></td>
 <td style="text-align: center;">search in current buffer (Document)</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;tw</code></td>
 <td style="text-align: center;">search in current directory
 (Workspace)</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;tw</code></td>
 <td style="text-align: center;">search current directory for selection
 (Workspace)</td>
 <td style="text-align: center;">telescope</td>
 <td style="text-align: center;">Visual</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;tp</code></td>
 <td style="text-align: center;">search yank history</td>
 <td style="text-align: center;">telescope &amp; yanky</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;dj</code></td>
 <td style="text-align: center;">goto next diagnostic</td>
 <td style="text-align: center;">lspsaga</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;dk</code></td>
 <td style="text-align: center;">goto previous diagnostic</td>
 <td style="text-align: center;">lspsaga</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;dd</code></td>
 <td style="text-align: center;">goto LSP definition of current word</td>
 <td style="text-align: center;">lspsaga</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;dh</code></td>
 <td style="text-align: center;">show type of current word if it’s an LSP
 variable or function/method</td>
 <td style="text-align: center;">lspsaga</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;di</code></td>
 <td style="text-align: center;">show LSP code actions for current
 word</td>
 <td style="text-align: center;">lspsaga</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>&lt;leader&gt;dr</code></td>
 <td style="text-align: center;">rename current word in entire LSP
 workspace</td>
 <td style="text-align: center;">lspsaga</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;do</code></td>
 <td style="text-align: center;">open LSP outline for current buffer</td>
 <td style="text-align: center;">lspsaga</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>y</code></td>
 <td style="text-align: center;">yank characters in motion</td>
 <td style="text-align: center;">yanky</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>&lt;leader&gt;g</code></td>
 <td style="text-align: center;">Insert docstring snippet for current
 function/class/module</td>
 <td style="text-align: center;">neogen</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>H</code></td>
 <td style="text-align: center;">Swap treesitter sibling to the left</td>
 <td style="text-align: center;">sibling-swap</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td style="text-align: center;"><code>L</code></td>
 <td style="text-align: center;">Swap treesitter sibling to the
 right</td>
 <td style="text-align: center;">sibling-swap</td>
 <td style="text-align: center;"></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td style="text-align: center;"><code>Ctrl-l</code></td>
 <td style="text-align: center;">Expand current snippet node or jump to
 next</td>
