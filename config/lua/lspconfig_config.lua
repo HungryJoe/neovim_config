@@ -147,4 +147,7 @@ return function()
 
   -- OCaml LS
   require'lspconfig'.ocamllsp.setup{}
+
+  -- Nix LS
+  require'lspconfig'.nil_ls.setup{}
 end
