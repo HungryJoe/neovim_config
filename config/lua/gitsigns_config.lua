@@ -3,7 +3,6 @@
 
 return function()
   require('gitsigns').setup {
-    keymaps = {},
     numhl = true, -- Toggle with `:Gitsigns toggle_numhl`
     signcolumn = false,  -- Toggle with `:Gitsigns toggle_signs`
     linehl   = false, -- Toggle with `:Gitsigns toggle_linehl`
