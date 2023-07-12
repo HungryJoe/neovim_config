@@ -1,5 +1,0 @@
-# Generate nvim keybindings HTML document from markdown and stylesheet
-# Author: Sam Kagan
-# Last Modified: 9/22/2021
-cd ./nvim-keybindings
-pandoc --variable pagetitle="Neovim Keybindings" --standalone -f markdown nvim-keybindings.md -o nvim-keybindings.html
