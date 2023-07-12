@@ -1,5 +1,5 @@
 -- Configure lspsaga plugin
--- Docs: :h lspsaga
+-- Docs: https://dev.neovim.pro/lspsaga
 
 return function ()
   require'lspsaga'.setup{
@@ -7,12 +7,10 @@ return function ()
       separator = " ",
       show_file = false,
     },
-    lightbulb = {
-      enable_in_insert = false
-    },
     outline = {
       keys = {
-        expand_or_jump = "<Tab>",
+        toggle_or_jump = "<Tab>",
+        jump = "<Enter>"
       },
     },
     beacon = {

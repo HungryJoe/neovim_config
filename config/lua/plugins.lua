@@ -14,7 +14,7 @@ local PKGS = {
       'nvim-treesitter/nvim-treesitter',
       run = function() vim.cmd ':TSUpdate' end,
     };
-    'kyazdani42/nvim-web-devicons';
+    'nvim-tree/nvim-web-devicons';
     'hoob3rt/lualine.nvim';
     {
       'akinsho/nvim-bufferline.lua',
@@ -35,7 +35,7 @@ local PKGS = {
     "folke/which-key.nvim";
     "Wansmer/sibling-swap.nvim";
     "gbprod/yanky.nvim";
-    "glepnir/lspsaga.nvim";
+    "nvimdev/lspsaga.nvim";
     "nguyenvukhang/nvim-toggler";
     "aklt/plantuml-syntax";
     {'gelguy/wilder.nvim',  run = ':UpdateRemotePlugins'};
