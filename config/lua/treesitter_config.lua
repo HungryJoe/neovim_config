@@ -49,33 +49,6 @@ return function()
       use_virtual_text = true,
       lint_events = {"BufWrite", "CursorHold"},
     },
-    textobjects = {
-      move = {
-        enable = true,
-        set_jumps = true,
-        goto_next_start = {
-          ["JJ"] = {query = {"@class.outer", "@function.outer"}},
-        },
-        goto_next_end = {
-          ["J"] = {query = {"@class.outer", "@function.outer"}},
-        },
-        goto_previous_start = {
-          ["KK"] = {query = {"@class.outer", "@function.outer"}},
-        },
-        goto_previous_end = {
-          ["K"] = {query = {"@class.outer", "@function.outer"}},
-        },
-      },
-      swap = {
-        enable = false,
-      },
-      select = {
-        enable = false,
-      },
-      lsp_interop = {
-        enable = false,
-      },
-    },
     matchup = {
       enable = true,
       disable = {},  -- optional, list of language that will be disabled

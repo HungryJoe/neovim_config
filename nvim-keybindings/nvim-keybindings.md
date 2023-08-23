@@ -69,10 +69,6 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `S` | sneak-search above cursor | lightspeed
 `z` | sneak-search below cursor | lightspeed | Operator-Pending
 `Z` | sneak-search above cursor | lightspeed | Operator-Pending
-`J` | goto start of next major section of code (Python & TS only) | treesitter-textobjects
-`JJ` | goto end of next major section of code (Python & TS only) | treesitter-textobjects
-`K` | goto start of previous major section of code (Python & TS only) | treesitter-textobjects
-`KK` | goto end of previous major section of code (Python & TS only) | treesitter-textobjects
 `<leader>tj` | find jumplist jump | telescope
 `<leader>tf` | find files | telescope
 `<leader>td` | search in current buffer (Document) | telescope
@@ -108,3 +104,5 @@ Key sequence | Action | Mode (if not `Normal`)
 `<leader>wl` | move cursor to window to right
 `<leader>d` | search inside selection | Visual
 `<leader>n` | repeat last search with `invcaseignore`
+`K`| move to top of window
+`J`| move to bottom of window

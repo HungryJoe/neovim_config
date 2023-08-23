@@ -88,4 +88,8 @@ return function()
 
   -- Luasnip
   vim.keymap.set({"i", "n"}, "<C-l>", require'luasnip'.expand_or_jump, opts)
+
+  -- Misc
+  vim.keymap.set("n", "K", "H", opts)
+  vim.keymap.set("n", "J", "L", opts)
 end

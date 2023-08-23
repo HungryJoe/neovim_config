@@ -27,7 +27,6 @@ local PKGS = {
     'folke/tokyonight.nvim';
     "folke/trouble.nvim";
     'ray-x/lsp_signature.nvim';
-    "HungryJoe/nvim-treesitter-textobjects";
     'ggandor/lightspeed.nvim';
     "nvim-telescope/telescope.nvim";
     {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'};
@@ -45,7 +44,6 @@ local PKGS = {
   }
 
 local function configure_plugins()
-  -- vim.opt.runtimepath:append("~/Code/Third_Party_Software/nvim-treesitter-textobjects")
   vim.opt.runtimepath:append("~/.local/share/vim/nginx_conf")
 
   require('lspconfig_config')()
