@@ -69,7 +69,7 @@ return function()
   vim.keymap.set("n", "<leader>td", require"telescope.builtin".current_buffer_fuzzy_find, opts)
   vim.keymap.set("n", "<leader>tw", require"telescope.builtin".live_grep, opts)
   vim.keymap.set("v", "<leader>tw", require"telescope.builtin".grep_string, opts)
-  vim.keymap.set("n", "<leader>tj", function() require"telescope.builtin".jumplist({show_line=false, fname_width=40}) end, opts)
+  vim.keymap.set("n", "<leader>tj", function() require"telescope.builtin".jumplist({fname_width=40}) end, opts)
 
   -- Yanky
   vim.keymap.set({"n","x"}, "y", "<Plug>(YankyYank)", opts)
