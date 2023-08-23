@@ -75,13 +75,13 @@ Key sequence | Action | Plugin | Mode (if not `Normal`)
 `<leader>tw` | search in current directory (Workspace) | telescope
 `<leader>tw` | search current directory for selection (Workspace) | telescope | Visual
 `<leader>tp` | search yank history | telescope & yanky
+`<leader>do` | seearch LSP symbols in current buffer | telescope
 `<leader>dj` | goto next diagnostic | lspsaga
 `<leader>dk` | goto previous diagnostic | lspsaga
 `<leader>dd` | goto LSP definition of current word | lspsaga
 `<leader>dh` | show type of current word if it's an LSP variable or function/method | lspsaga
 `<leader>di` | show LSP code actions for current word | lspsaga
 `<leader>dr` | rename current word in entire LSP workspace | lspsaga
-`<leader>do` | open LSP outline for current buffer | lspsaga
 `y`| yank characters in motion | yanky
 `<leader>g` | Insert docstring snippet for current function/class/module | neogen
 `H` | Swap treesitter sibling to the left | sibling-swap

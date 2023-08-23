@@ -36,7 +36,6 @@ return function()
   vim.keymap.set("n", "<leader>dh", "<CMD>Lspsaga hover_doc<CR>",
     opts
   )
-  vim.keymap.set("n", "<leader>do", "<CMD>Lspsaga outline<CR>", opts)
 
   -- Trouble
   vim.keymap.set("n", "<leader>rr", "<CMD>TroubleToggle<CR>", opts)
@@ -70,6 +69,7 @@ return function()
   vim.keymap.set("n", "<leader>tw", require"telescope.builtin".live_grep, opts)
   vim.keymap.set("v", "<leader>tw", require"telescope.builtin".grep_string, opts)
   vim.keymap.set("n", "<leader>tj", function() require"telescope.builtin".jumplist({fname_width=40}) end, opts)
+  vim.keymap.set("n", "<leader>do", require"telescope.builtin".lsp_document_symbols, opts)
 
   -- Yanky
   vim.keymap.set({"n","x"}, "y", "<Plug>(YankyYank)", opts)
