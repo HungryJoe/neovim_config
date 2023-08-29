@@ -1,5 +1,5 @@
 -- Configure lspsaga plugin
--- Docs: https://dev.neovim.pro/lspsaga
+-- Docs: https://nvimdev.github.io/lspsaga/
 
 return function ()
   require'lspsaga'.setup{
@@ -15,6 +15,9 @@ return function ()
     },
     beacon = {
       enabled = false,
+    },
+    lightbulb = {
+      sign = false
     },
   }
 end
